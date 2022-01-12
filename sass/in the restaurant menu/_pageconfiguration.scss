@@ -1,0 +1,163 @@
+.images-folder {
+    width: 100%; /*largeur */
+    height: 300px; /*hauteur */
+    object-fit: cover;
+}
+
+.title-header {
+    align-items: center; /*définit l'alignement d'un objet au sein de son conteneur */
+    display: flex;
+    font-weight: normal;
+    justify-content: space-between; /*dont l'espace doit être réparti autour des éléments */
+    padding: 0 18px; /*en haut en bas, à droite à gauche */
+        h2 {
+            font-family: $font-title;
+            margin-top: 32px;
+        }
+}
+
+//menu 
+
+.restaurant-part {
+    background-color: $white;
+    border-radius: 25px 25px 0 0; /*en haut à gauche, en haut à droite, en bas à droite, en bas à gauche*/
+    position: relative;
+    padding-bottom: 30px;
+
+    @media screen and (min-width: 992px) {
+        margin: -8px 48px 0px; /*en haut à gauche, en haut à droite et en bas à gauche, en bas à droite*/
+    }
+}
+
+.different-dishes {
+    display: grid;
+
+    @media (min-width: 992px) {
+        grid-template-columns: repeat(3,1fr);
+        column-gap: 16px;
+        margin: 0 48px;
+    }
+}
+
+//Starter, dish, dessert 
+
+.menus {
+    max-width: 100%;
+    overflow: hidden;
+    padding: 0px 11px;
+
+    &__subtitle {
+        font-family: $font-global;
+        font-weight: normal;
+        padding-bottom: 5px;
+        position: relative;
+        text-transform: uppercase; /*lettre majuscule*/
+        &::after { /*surlignage bleu*/
+            background-color: $tertiary;
+            bottom: 0;
+            content: "";
+            height: 3px; /*hauteur*/
+            left: 0;
+            position: absolute;
+            width: 28px;
+        }
+    }
+}
+
+//Subpart
+
+@keyframes scale {
+    0% {
+    transform: scale(0); 
+        /*permet de déplacer un élément dans l'espace tridimensionnel*/
+    }
+    100% {
+    transform: scale(1); 
+    }
+}
+    
+.included-menu {
+    background-color: white;
+    border-radius: 14px;
+    box-shadow: 3px 4px 9px grey;
+    display: flex;
+    margin: 18px 0px;
+    overflow: hidden; /*dans sa partie*/
+    padding: 11px;
+    cursor: pointer;
+    animation: scale .4s;
+    animation-timing-function: ease-in-out; /*suit une courbe d’accélération et de décélération subtile*/
+    animation-fill-mode: forwards; /*mettre l'animation sur pause sur la toute dernière image */
+    max-width: 100%; /*largeur*/
+
+    &__header {
+        flex: 1;
+        overflow: hidden; /*dans sa partie*/
+        text-overflow: ellipsis; /*définit la façon dont le contenu textuel qui dépasse d'une boîte est signalé ici ...*/
+        white-space: nowrap; /*depasse de l'élément*/
+    }
+
+    &__name {
+        flex: 1;
+        font-family: $font-global;
+        font-size: 17px;
+        font-weight: bold; /*gras*/
+        margin: 0;
+        overflow: hidden;
+        text-overflow: ellipsis; /*définit la façon dont le contenu textuel qui dépasse d'une boîte est signalé ici ...*/
+        white-space: nowrap; /*depasse de l'élément*/
+        margin-bottom: 5px;
+    }
+
+    &__definition {
+        margin: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-weight: 100;
+    }
+
+    &__rate {
+        align-items: flex-end;
+        display: flex;
+        font-family: $font-global;
+        font-weight: 600; /*niveau de gras*/
+        justify-content: flex-end;
+        padding-left: 18px;
+    }
+
+    &__approve {
+        align-items: center;
+        background-color: $tertiary;
+        display: flex;
+        justify-content: center;
+        margin: -15px -71px -15px 15px;/*en haut à gauche, en haut à droite, en bas à droite, en bas à gauche*/
+        transition-duration: .4s;
+        width: 60px;
+        font-size: 20px;
+        color: white;
+    }
+
+    &:hover &__approve {
+        margin-right: -12px;
+    }
+
+    &__icon {
+        align-items: center;
+        border-radius: 90px;
+        display: flex;
+        height: 23px; /*hauteur*/
+        justify-content: center;
+        transform: rotate(360deg);
+        transition-duration: .5s;
+        width: 23px;/*largeur*/
+    }
+
+    &:hover &__icon {
+        transform: rotate(0);
+    }
+
+    &__picto {
+        color: $tertiary;
+    }
+}

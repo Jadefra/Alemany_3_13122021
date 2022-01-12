@@ -1,0 +1,78 @@
+.section-restaurants {
+    padding: 9px 0px 4px 0px; /*en haut, à droite, en bas, à gauche*/
+    background-color: $white;
+
+    @media screen and (min-width: 600px) {
+    padding: 12px 22px;
+    }
+    @media screen and (min-width: 1024px) {
+    padding: 12px 48px; /*en haut en bas, à droite à gauche*/
+    }
+}
+
+.section-restau {
+    @media (min-width: 992px) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    background-color: $white;
+    padding-bottom: 28px;
+
+    .restaurant-menu {
+        background-color: white;
+        border-radius: 18px;
+        box-shadow: 3px 4px 9px grey;
+        margin: 8px;
+        overflow: hidden; /*gérer le dépassement du contenu*/
+        position: relative;
+
+        img {
+            height: 158px; /*hauteur*/
+            object-fit: cover; /*img zoomé*/
+            width: 100%;
+        }
+
+        .details {
+            align-items: center; /*définit l'alignement d'un objet au sein de son conteneur */
+            display: flex;
+            flex-wrap: wrap; /*sont contraints à être disposés dans son conteneur */
+            padding: 6px; 
+        }
+
+        .menu-details {
+            flex: 1;
+            margin: 4px 0px 4px 9px; /*en haut, à droite, en bas, à gauche*/
+            width: 146px;
+
+            h4 {
+                margin: 0; /*la largeur*/
+            }
+        }
+
+        .restaurant-name {
+            font-family: $font-global;
+            font-weight: bolder; /*gras*/
+        }
+
+        .restaurant-place {
+            font-family: $font-global-secondary;
+            font-weight: lighter;
+        }
+
+        .badge-new {
+            background-color: $frostygreen;
+            color: $green;
+            font-size: 14px;
+            position: absolute;
+            right: 11px;
+            top: 11px;
+
+            span {
+                margin: 6px 11px 6px 11px ; /*en haut, à droite, en bas, à gauche*/
+            }
+        }
+
+    }
+
+}

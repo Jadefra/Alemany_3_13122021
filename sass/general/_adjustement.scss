@@ -1,0 +1,26 @@
+html{
+    line-height: 1;/*La propriété line-height définit la hauteur de la boîte d'une ligne*/
+}
+
+body{
+    margin: 0
+}
+
+main{
+    display: block;
+}
+
+h1{
+    font-size: 32px;
+    margin: 11px 0; /*Le premier en haut en bas et le deuxième à gauche à droite*/
+}
+
+a {
+    background-color: transparent; /*fonctionne pas ?*/
+}
+
+svg:first-of-type { /*ca le met en absolu et pas créer un espacement en dessous de lui, pour maquer le premier svg*/
+    width: 0; 
+    height: 0; 
+    position: absolute;
+}

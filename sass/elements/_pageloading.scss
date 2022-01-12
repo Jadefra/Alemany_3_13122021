@@ -1,0 +1,92 @@
+/* Animation du loader */
+
+.loading {
+    background: $white;
+    background-size: cover; /*zoom*/
+    position: fixed;/*il restera au meme endroit en descendant la page*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /*largeur*/
+    height: 100vh; /*hauteur 100% de la hauteur de la page*/
+    top: 0;
+    left: 0;
+    z-index: 2; /*definit la position d'un élément*/
+    transform-origin:top;
+    transform: scale(0); /*affichage*/
+    animation: revealLoading 4s;
+    &__home {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &__name {
+            font-family: $font-title;
+            font-size: 48px;
+            padding-bottom: 48px;
+        }
+        &__circular {
+            width: 88px;/*largeur*/
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            &__tool { /*générique*/
+                width: 18px; /*largeur*/
+                height: 18px; /*hauteur*/
+                border-radius: 55%;
+
+                &__purple {
+                    background: $primary;
+                }
+                &__pink {
+                    background: $secondary;
+                }
+                &__blue {
+                    background: $tertiary;
+                }
+                &:nth-child(1) { /*nth-child selectionne le premier élément puis ainsi de suite*/
+                    animation: jump 0.5s alternate infinite;
+                }
+                &:nth-child(2) {
+                    animation: jump 0.5s 0.2s alternate infinite;
+                }
+                &:nth-child(3) {
+                    animation: jump 0.5s 0.3s alternate infinite;
+                }
+            }
+        }
+    }
+}
+
+@keyframes revealLoading {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    70% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    90% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0);
+        display: none; /*??entrainera son retrait de l'arbre*/
+    }
+}
+
+@keyframes jump {
+    0% {
+        transform: translate3d(0, 12px, 0); /*permet de déplacer un élément dans l'espace tridimensionnel*/
+    }
+    100% {
+        transform: translate3d(0, -19px, 0);
+    }
+}

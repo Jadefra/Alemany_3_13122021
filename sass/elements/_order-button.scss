@@ -1,0 +1,22 @@
+.order_button {
+    align-items: center; /*définit l'alignement d'un objet au sein de son conteneur */
+    display: flex;
+    border: none;
+    margin: 30px auto;
+
+    &:hover {
+        span {
+            background: linear-gradient(0.45turn,rgb(208, 145, 212) 66%, rgb(173, 119, 218) 90%);/*créer du dégradé */
+        }
+    }
+
+    span {
+        background: linear-gradient(0.45turn,rgb(210, 132, 216) 66%, rgb(173, 119, 218) 90%);/*créer du dégradé */
+        border-radius: 20px;
+        box-shadow: 3px 4px 9px grey;
+        color: white;
+        font-size: 17px;
+        padding: 18px 32px;
+        width: 140px;
+    }
+}
