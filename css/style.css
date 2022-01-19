@@ -159,7 +159,6 @@ svg:first-of-type {
   box-shadow: 3px 4px 9px grey;
   color: white;
   font-size: 17px;
-  width: 140px;
   padding: 18px 32px;
 }
 
@@ -177,7 +176,7 @@ svg:first-of-type {
 @media screen and (min-width: 768px) {
   .section-functions {
     display: grid;
-    grid-template-columns: repeat 3, 1fr;
+    grid-template-columns: repeat(3, 1fr);
     margin-bottom: 18px;
   }
 }
@@ -289,9 +288,10 @@ svg:first-of-type {
   font-size: 14px;
   top: 11px;
   right: 11px;
-}
-.section-restau .restaurant-menu .badge-new span {
-  margin: 6px 11px 6px 11px;
+  padding: 8px;
+  font-family: "Roboto", "sans-serif";
+  font-weight: bold;
+  border-radius: 3px;
 }
 
 body {
@@ -361,7 +361,7 @@ footer ul {
   font-size: 16px;
   align-items: center;
   justify-content: center;
-  box-shadow: 3px 4px 9px grey;
+  box-shadow: 3px 4px 9px #131314;
   width: 100%;
 }
 .head__city {
