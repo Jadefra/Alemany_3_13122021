@@ -1,5 +1,5 @@
 html{
-    line-height: 1;/*La propriété line-height définit la hauteur de la boîte d'une ligne*/
+    line-height: 1;
 }
 
 body{
@@ -12,14 +12,14 @@ main{
 
 h1{
     font-size: 32px;
-    margin: 11px 0; /*Le premier en haut en bas et le deuxième à gauche à droite*/
+    margin: 11px 0; 
 }
 
 a {
-    background-color: transparent; /*fonctionne pas ?*/
+    background-color: transparent; 
 }
 
-svg:first-of-type { /*ca le met en absolu et pas créer un espacement en dessous de lui, pour maquer le premier svg*/
+svg:first-of-type { 
     width: 0; 
     height: 0; 
     position: absolute;

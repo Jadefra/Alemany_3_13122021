@@ -1,21 +1,21 @@
 .head {
     &__title {
-        align-items: center; /*définit l'alignement d'un objet au sein de son conteneur */
         display: flex;
         flex-direction: column;
         justify-content: center;
         font-family: $font-title;
         font-weight: normal;
+        align-items: center; 
     }
 
     &__locatpoint {
-        align-items: center;
         background: #eaeaea;
-        box-shadow: 3px 4px 9px grey;
         display: flex;
         font-family: $font-global;
         font-size: 16px;
-        justify-content: center; /*dont l'espace doit être réparti autour des éléments */
+        align-items: center;
+        justify-content: center; 
+        box-shadow: 3px 4px 9px grey;
         width: 100%;
     }
 
@@ -27,23 +27,24 @@
 .discover {
     background-color: $white;
     font-family: $font-global;
-    padding-bottom: 73px;
     text-align: center; 
+    padding-bottom: 73px;
+
 
     &__title {
         font-size: 17px;
-        padding: 19px 73px 0px; /*en haut, à droite à gauche, en bas*/
+        padding: 19px 73px 0px; 
     }
 
     &__txt {
         font-size: 16px;
-        font-weight: 200; /*définir la graisse utilisée*/
-        margin-bottom: 50px;
+        font-weight: 200; 
         padding: 0 38px;
+        margin-bottom: 50px;
     }
 
     &__button {
-        background: linear-gradient($mauve 40%, $primary); /*dégradé de rose-violet*/
+        background: linear-gradient($mauve 40%, $primary); 
         border-radius: 48px;
         box-shadow: 3px 4px 9px lighten(grey, 30%);
         color: white;
