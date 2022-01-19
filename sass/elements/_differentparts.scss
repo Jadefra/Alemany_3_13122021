@@ -10,7 +10,7 @@
 
 .section-functions {
     @media screen and (min-width: 768px) {
-        display: grid; /*créer des tableaux*/
+        display: grid; 
         grid-template-columns: repeat (3,1fr);
         margin-bottom: 18px;
     }
@@ -19,23 +19,23 @@
         background-color: $white;
         border-radius: 22px;
         box-shadow: 3px 4px 9px grey;
+        margin: 18px 18px; 
         font-family: $font-global;
-        margin: 18px 18px; /*en haut et en bas, à gauche à droite */
 
         &__preference {
             display: flex;
-            flex-direction: row; /*sur la ligne*/
-            justify-content: flex-start; /*dont l'espace doit être réparti  */
-            align-items: center; /*définit l'alignement d'un objet au sein de son conteneur */
-            height: 68px; /*la hauteur*/
+            flex-direction: row; 
+            justify-content: flex-start; 
+            height: 68px; 
+            align-items: center; 
 
             .number {
                 background-color: $primary;
-                border-radius: 48%;
                 color: white;
                 font-size: 16px;
-                margin: 1px 9px 1px -8px; /*en haut, à droite, en bas, à gauche*/
+                border-radius: 48%;
                 padding: 6px 9px;
+                margin: 1px 9px 1px -8px; 
             }
 
             .span {
@@ -47,8 +47,8 @@
             .icon {
                 width: 48px;
                 font-size: 18px;
-                text-align: center; /*centrer le texte sur la page*/
                 color: $grey;
+                text-align: center; 
             }
         }
     .colored {

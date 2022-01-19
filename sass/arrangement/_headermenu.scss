@@ -1,22 +1,22 @@
-.head_title {
-    align-items: center; /*définit l'alignement d'un objet au sein de son conteneur */
+.head__title {
     display: flex;
+    align-items: center; 
+    justify-content: center; 
     height: 65px;
-    justify-content: center; /*dont l'espace doit être réparti autour des éléments */
 
     img {
-        height: 27px; /*la hauteur*/
+        height: 27px; 
     }
 
     .backtohome {
-        left: 18px;
         position: absolute;
+        left: 18px;
         top: 28px;
     }
 }
 
 .logoOMF {
-    margin-bottom: -28px;
     object-fit: cover;
     width: 100%;
+    margin-bottom: -28px;
 }
