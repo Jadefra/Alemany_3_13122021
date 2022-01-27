@@ -213,11 +213,11 @@ svg:first-of-type {
   color: #7a7a7a;
   text-align: center;
 }
-.section-functions .choose .colored {
+.section-functions .choose:hover {
   background-color: #ede8ed;
   border-radius: 13px;
 }
-.section-functions .choose .colored .icon {
+.section-functions .choose:hover .icon {
   color: #8f54d6;
 }
 
@@ -428,13 +428,25 @@ footer ul {
   justify-content: space-between;
   padding: 0 18px;
 }
+.title-header svg {
+  margin-right: 0;
+  margin-top: 3px;
+}
 .title-header h2 {
   font-family: "Shrikhand";
   margin-top: 32px;
+  max-width: 100%;
+  max-width: calc(100% - 30px);
+}
+@media (max-width: 280px) {
+  .title-header h2 {
+    font-size: 22px;
+  }
 }
 
 .restaurant-part {
   position: relative;
+  top: -20px;
   background-color: #f0f0f0;
   border-radius: 25px 25px 0 0;
   padding-bottom: 30px;
